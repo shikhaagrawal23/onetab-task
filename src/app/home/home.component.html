@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="mt-4">
+        <app-quick-add [listData]="medicineList" (quickAddSubmit)="quickAddClicked($event)"></app-quick-add>
+    </div>
+    <div class="mt-4">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">S.No.</th>
+                    <th scope="col">Medicine Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col" class="w-25">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of tableData; let index = index">
+                    <th scope="row">{{ index + 1 }}</th>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.desc }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>
+                        <div>
+                            <a [routerLink]="['edit', item.id]">
+                                <button class="btn btn-warning mr-2">Edit</button>
+                            </a>
+                            <a [routerLink]="['add']" [queryParams]="{ cloneId: item.id}">
+                                <button class="btn btn-info mr-2">Clone</button>
+                            </a>
+                            <button class="btn btn-danger" (click)="deleteItem(item)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="no-result-found" *ngIf="tableData && tableData.length == 0">
+            No Result Found!
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" [ngClass]="{'show': isModalShow}" [style.display]="modalDisplay">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete Confirmation</h5>
+                <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                Are you sure to delete this item ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="deleteConfirm()">Yes Delete It</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade" [ngClass]="{'show': isModalShow}" *ngIf="isModalShow"></div>

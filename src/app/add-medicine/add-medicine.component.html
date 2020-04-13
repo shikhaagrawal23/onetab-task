@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{isUpdate ? "Edit" : "Add New"}} Medicine</h5>
+                    <form [formGroup]="otForm" (ngSubmit)="onSubmit($event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Medicine Name" formControlName="name"
+                            [ngClass]="{'form-submitted': formSubmitted && !otForm.value['name']}">
+                        </div>
+                        <div class="form-group">
+                            <label for="desc">Description</label>
+                            <textarea class="form-control" id="desc" rows="3" formControlName="desc"
+                            [ngClass]="{'form-submitted': formSubmitted && !otForm.value['desc']}"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" formControlName="quantity"
+                            [ngClass]="{'form-submitted': formSubmitted && !otForm.value['quantity']}">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="text" class="form-control" id="price" placeholder="Enter Price" formControlName="price"
+                            [ngClass]="{'form-submitted': formSubmitted && !otForm.value['price']}">
+                        </div>
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-primary">{{isUpdate ? 'Update' : 'Add'}} Medicine</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

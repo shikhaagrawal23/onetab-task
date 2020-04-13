@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Qucik Add</h5>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="name">Medicine</label>
+                    <select class="form-control" id="name" [(ngModel)]="selectedItem" [ngClass]="{ 'is-invalid': formSubmited && !selectedItem }">
+                        <option *ngFor="let item of listData" [ngValue]="item">{{item.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" [(ngModel)]="quantity" class="form-control" placeholder="Enter Quantity" id="quantity" 
+                    [ngClass]="{ 'is-invalid': formSubmited && (!quantity || quantity == 0)}"/>
+                </div>
+            </div>
+            <div class="col text-right">
+                <button class="btn btn-primary mt-4" (click)="add()">Quick Add</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+.ng-invalid.ng-dirty:not(form), .ng-invalid:not(form).form-submitted {
+    border: solid 2px lightcoral;
+  }
+  .form-control.form-submitted {
+    border: solid 2px lightcoral;
+  }

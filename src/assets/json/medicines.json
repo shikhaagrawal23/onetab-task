@@ -1,0 +1,32 @@
+{
+    "data": [{
+            "id": 1,
+            "name": "Saridon Tablet",
+            "desc": "Saridon is a mild analgesic, primarily used as a pain reliever and used to treat mild fever. It is also used to get instant relief from the pain in the case of a backache, a headache, arthritis and a toothache. It also reduces pain in the body caused due to fever. It has a fast acting formula and provides quick relief.",
+            "price": "32"
+        },
+        {
+            "id": 2,
+            "name": "Crocin Pain Relief Tablet",
+            "desc": "Crocin Pain Relief Tablet targets the pain and provides relief. It affects the metabolism process and stimulates the central nervous system and makes one feel energetic and alert. It interferes with the absorption of calcium in the body and increases the blood pressure.",
+            "price": "60"
+        },
+        {
+            "id": 3,
+            "name": "Shelcal 500 Tablet",
+            "desc": "Shelcal-500 Tablet helps to reduce the calcium deficiency that leads to weak bones as the body starts using calcium from the bone. The shelcal tablets are necessary as the intake of calcium is important to keep the bones strong. The shelcal contain ingredients that helps in better absorption, acidity, heartburn, stomach ulcer and other conditions. The calcium along with vitamin D3 enhances the level of calcium in the blood. It is available in tablet form.",
+            "price": "99"
+        },
+        {
+            "id": 4,
+            "name": "Zincovit Tablet",
+            "desc": "Zincovit Tablet is an advanced formula of high concentration of vitamins, essential minerals and Zinc. Zinc has been found to be very important in zincovit for boosting up immunity. Selenium in Zincovit emerges as an effective immune booster which ensures a strong of immunity. Vitamin A promotes healthy cell growth while Vitamin C helps with the growth and repair of tissues in all parts of your body. Zincovit tablets can be used a nutritional supplement and aids in the absorption of calcium by the body as well. Zincovit Tablets recommended as a dietary supplement that provides nutritional support in cardiac, diabetic, tubercular and rheumatic patients as well as those suffering from acute and chronic diseases.",
+            "price": "90"
+        }, {
+            "id": 5,
+            "name": "Becosules Capsule",
+            "desc": "Becosules capsule is a multivitamin formulation of Vitamin B complex (Vitamin B12, B1, B2, B6, B3 and Folic acid), Vitamin C and Calcium pantothenate. ",
+            "price": "38"
+        }
+    ]
+}

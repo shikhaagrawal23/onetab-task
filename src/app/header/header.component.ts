@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public isHeaderOpen = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  headerToggle(){
+    this.isHeaderOpen = !this.isHeaderOpen;
   }
 
 }
